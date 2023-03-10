@@ -15,3 +15,5 @@ Include the improved test code in this file.
 
 ## Answer
 
+Dans le projet Commons Collections, nous avons utilisé le test 'TooManyMethods' pour trouver des tests qui contiennent un grand nombre de méthodes de test.
+ Nous avons eu en retour la méthode "TestPredicatedSortedMap2" qui contient 38 méthodes de test, ce qui est considéré comme trop pour un seul test.
