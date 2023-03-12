@@ -53,3 +53,46 @@ Use the project in [tp3-date](../code/tp3-date) to complete this exercise.
 
 ## Answer
 
+Méthode Date(int day, int month, int year)
+- (1, 1, 1) : jour minimum, mois minimum, année minimum
+- (1, 1, 1582) : jour minimum, mois minimum, année d'introduction du calendrier grégorien
+- (31, 12, 9999) : jour maximum, mois maximum, année maximum
+- (29, 2, 2020) : cas valide pour année bissextile
+- (29, 2, 2021) : cas invalide pour année non-bissextile
+- (30, 2, 2020) : cas invalide pour février (mois avec maximum de 29 jours)
+- (31, 4, 2020) : cas invalide pour avril (mois avec maximum de 30 jours)
+
+Méthode isValidDate(int day, int month, int year)
+- (1, 1, 1) : jour minimum, mois minimum, année minimum
+- (1, 1, 1582) : jour minimum, mois minimum, année d'introduction du calendrier grégorien
+- (31, 12, 9999) : jour maximum, mois maximum, année maximum
+- (29, 2, 2020) : cas valide pour année bissextile
+- (29, 2, 2021) : cas invalide pour année non-bissextile
+- (30, 2, 2020) : cas invalide pour février (mois avec maximum de 29 jours)
+- (31, 4, 2020) : cas invalide pour avril (mois avec maximum de 30 jours)
+
+Méthode isLeapYear(int year)
+- 1 : année non-bissextile
+- 4 : année bissextile
+- 100 : année non-bissextile
+- 400 : année bissextile
+
+Méthode compareTo(Date other)
+- date égale à other
+- date antérieure à other
+- date postérieure à other
+
+
+1er essais avec PIT : Line Coverage: 29/59 (49%)
+
+Pour augmenter ce taux on peut :
+Pour Date : Ajouter des valeurs négatives
+Pour compareTo(Date other) :
+- Tester la comparaison de deux dates ayant des années différentes mais des mois et des jours identiques
+- Tester la comparaison de deux dates ayant des mois différents mais des années et des jours identiques
+- Tester la comparaison de deux dates ayant des jours différents mais des mois et des années identiques
+- Tester la comparaison de deux dates avec des dates null
+- Tester la comparaison de deux dates avec une date null et une date non-null
+- Tester la comparaison de deux dates avec des années négatives.
+
+Nous sommes passé a une couverture de 53%
